@@ -17,20 +17,20 @@ implements GenericService<T,ID> {
 		// TODO Auto-generated constructor stub
 	}
 
-	
+	@Override
 	public T save(T entity) {
 		// TODO Auto-generated method stub
 		
 		return getDao().save(entity);
 	}
 
-	
+	@Override
 	public void delete(ID id) {
 		// TODO Auto-generated method stub
 		getDao().deleteById(id);
 	}
 
-	
+	@Override
 	public T get(ID id) {
 		// TODO Auto-generated method stub
 		Optional<T>obj = getDao().findById(id);
@@ -40,7 +40,7 @@ implements GenericService<T,ID> {
 		return null;
 	}
 
-	
+	@Override
 	public List<T> getAll() {
 		// TODO Auto-generated method stub
 		List<T>returnList= new ArrayList<>();
